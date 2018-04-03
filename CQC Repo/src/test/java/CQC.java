@@ -48,7 +48,7 @@ public class CQC {
 
         System.out.println(currentDir.getAbsolutePath());
 
-        report = new ExtentReports(currentDir.getAbsolutePath() + "\\demo_test.html", true);
+
 
         //change this variable (0,1,2) to use different browsers
         int choice = 1;
@@ -84,6 +84,9 @@ public class CQC {
 
 
     public void demoTest() throws InterruptedException {
+
+        report = new ExtentReports(currentDir.getAbsolutePath() + "\\demo_test.html", true);
+
         test = report.startTest("Demo Test");
 
         driver.manage().window().maximize();
@@ -106,16 +109,20 @@ public class CQC {
         testPasswordField.sendKeys("bert");
         Thread.sleep(1000);
 
-        test.log(LogStatus.INFO, "Attempted to login");
+
 
         WebElement testButton = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > form > div > center > table > tbody > tr > td:nth-child(1) > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > input[type=\"button\"]"));
         testButton.click();
         Thread.sleep(1000);
 
+        test.log(LogStatus.INFO, "Set up user");
+
         WebElement login = driver.findElement(By.cssSelector(
                 "body > div > center > table > tbody > tr:nth-child(2) > td > div > center > table > tbody > tr > td:nth-child(2) > p > small > a:nth-child(7)"));
         login.click();
+
+
 
         WebElement loginUsernameField = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > form > div > center > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(1) > td:nth-child(2) > p > input"));
@@ -129,6 +136,8 @@ public class CQC {
                 "body > table > tbody > tr > td.auto-style1 > form > div > center > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > input[type=\"button\"]"));
         loginButton.click();
         Thread.sleep(1000);
+
+        test.log(LogStatus.INFO, "Attempted to login");
 
         WebElement loginMessage = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > big > blockquote > blockquote > font > center > b"));
