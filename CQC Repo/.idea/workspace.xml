@@ -27,8 +27,8 @@
       <file leaf-file-name="CQC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CQC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+            <state relative-caret-position="-898">
+              <caret line="88" column="44" lean-forward="true" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CQC.demoTest">
+  <component name="RunManager" selected="JUnit.CQC">
     <configuration default="false" name="CQC.demoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="CQC Repo" />
@@ -150,6 +150,27 @@
       <option name="MAIN_CLASS_NAME" value="CQC" />
       <option name="METHOD_NAME" value="demoTestWithExcel" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CQC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CQC Repo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CQC" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -366,14 +387,16 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.CQC.demoTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.CQC.demoTestWithExcel" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CQC" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CQC.demoTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CQC.demoTestWithExcel" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CQC" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CQC.demoTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CQC.demoTestWithExcel" />
       </list>
     </recent_temporary>
   </component>
@@ -394,6 +417,18 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="CQC - 2018.04.03 at 15h 00m 20s.xml">
+      <configuration name="CQC" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CQC - 2018.04.03 at 15h 02m 20s.xml">
+      <configuration name="CQC" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CQC - 2018.04.03 at 15h 02m 47s.xml">
+      <configuration name="CQC" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CQC - 2018.04.03 at 15h 03m 55s.xml">
+      <configuration name="CQC" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="CQC_demoTest - 2018.04.03 at 14h 36m 48s.xml">
       <configuration name="CQC.demoTest" configurationId="JUnit" />
     </history-entry>
@@ -403,33 +438,21 @@
     <history-entry file="CQC_demoTest - 2018.04.03 at 14h 43m 24s.xml">
       <configuration name="CQC.demoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 26m 32s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
+    <history-entry file="CQC_demoTest - 2018.04.03 at 14h 55m 01s.xml">
+      <configuration name="CQC.demoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 26m 48s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
+    <history-entry file="CQC_demoTest - 2018.04.03 at 14h 56m 24s.xml">
+      <configuration name="CQC.demoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 31m 00s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 32m 06s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 32m 29s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 32m 57s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CQC_demoTestWithExcel - 2018.04.03 at 14h 36m 10s.xml">
-      <configuration name="CQC.demoTestWithExcel" configurationId="JUnit" />
+    <history-entry file="CQC_demoTest - 2018.04.03 at 14h 57m 34s.xml">
+      <configuration name="CQC.demoTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="10597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -542,8 +565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CQC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+        <state relative-caret-position="-898">
+          <caret line="88" column="44" lean-forward="true" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

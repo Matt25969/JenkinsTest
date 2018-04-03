@@ -29,6 +29,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.*;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -39,13 +40,15 @@ public class CQC {
 
     ExtentReports report;
     ExtentTest test;
-
+    File currentDir = new File("");
 
     @Before
 
     public void setup() {
 
-        report = new ExtentReports("C:\\Users\\Matthew\\Desktop\\cookie_test.html", true);
+        System.out.println(currentDir.getAbsolutePath());
+
+        report = new ExtentReports(currentDir.getAbsolutePath() + "\\demo_test.html", true);
 
         //change this variable (0,1,2) to use different browsers
         int choice = 1;
@@ -160,7 +163,7 @@ public class CQC {
 
         FileInputStream file = null;
         try {
-            file = new FileInputStream("C:\\Users\\Matthew\\Desktop/login.xls");
+            file = new FileInputStream(currentDir.getAbsolutePath() + "\\login.xls");
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
