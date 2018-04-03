@@ -4,6 +4,9 @@ import java.util.Iterator;
 import static org.apache.poi.ss.usermodel.Cell.CELL_TYPE_STRING;
 import static org.junit.Assert.*;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -34,11 +37,18 @@ public class CQC {
 
     WebDriver driver = null;
 
+    ExtentReports report;
+    ExtentTest test;
+
+
     @Before
 
     public void setup() {
+
+        report = new ExtentReports("C:\\Users\\Matthew\\Desktop\\cookie_test.html", true);
+
         //change this variable (0,1,2) to use different browsers
-        int choice = 2;
+        int choice = 1;
 
         switch (choice) {
             case 0:
@@ -69,10 +79,9 @@ public class CQC {
 
     @Test
 
-    // this test shows a simple automated test that can be run using the 3 different browsers
-    // Edge is currently not working - at least on my machine - but that could be due to the version that I have
 
     public void demoTest() throws InterruptedException {
+        test = report.startTest("Demo Test");
 
         driver.manage().window().maximize();
 
@@ -93,6 +102,8 @@ public class CQC {
                 "body > table > tbody > tr > td.auto-style1 > form > div > center > table > tbody > tr > td:nth-child(1) > div > center > table > tbody > tr:nth-child(2) > td:nth-child(2) > p > input[type=\"password\"]"));
         testPasswordField.sendKeys("bert");
         Thread.sleep(1000);
+
+        test.log(LogStatus.INFO, "Attempted to login");
 
         WebElement testButton = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > form > div > center > table > tbody > tr > td:nth-child(1) > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > input[type=\"button\"]"));
@@ -118,9 +129,19 @@ public class CQC {
 
         WebElement loginMessage = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > big > blockquote > blockquote > font > center > b"));
-        assertEquals(loginMessage.getText(), "**Successful Login*");
+
+        assertEquals(loginMessage.getText(), "**Successful Login**");
+
+        if (loginMessage.getText().equals("**Successful Login**")) {
+            test.log(LogStatus.PASS, "Login valid");
+        } else {
+            test.log(LogStatus.FAIL, "Login failed");
+        }
 
         driver.quit();
+        report.endTest(test);
+        report.flush();
+
     }
 
     @Test
@@ -139,7 +160,7 @@ public class CQC {
 
         FileInputStream file = null;
         try {
-            file = new FileInputStream("C:/Users/admin/workspace/login.xls");
+            file = new FileInputStream("C:\\Users\\Matthew\\Desktop/login.xls");
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
