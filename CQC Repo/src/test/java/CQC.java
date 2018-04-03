@@ -55,22 +55,22 @@ public class CQC {
 
         switch (choice) {
             case 0:
-                System.setProperty("webdriver.gecko.driver", "C:/Development/web_driver/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", currentDir.getAbsolutePath() + "\\web_driver/geckodriver.exe");
                 driver = new FirefoxDriver();
                 break;
             // run and comeplete
             case 1:
-                System.setProperty("webdriver.chrome.driver", "C:/Development/web_driver/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver",currentDir.getAbsolutePath() + "\\web_driver/chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
             //run and complete
             case 2:
-                System.setProperty("webdriver.ie.driver", "C:/Development/web_driver/IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver", currentDir.getAbsolutePath() + "\\web_driver/IEDriverServer.exe");
                 driver = new InternetExplorerDriver();
                 //run and comeplete
                 break;
             case 3:
-                System.setProperty("webdriver.edge.driver", "C:/Development/web_driver/MicrosoftWebDriver.exe");
+                System.setProperty("webdriver.edge.driver", currentDir.getAbsolutePath() + "\\web_driver/MicrosoftWebDriver.exe");
                 driver = new EdgeDriver();
                 break;
             //failed
