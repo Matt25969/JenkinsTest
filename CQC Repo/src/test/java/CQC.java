@@ -118,7 +118,7 @@ public class CQC {
 
         WebElement loginMessage = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > big > blockquote > blockquote > font > center > b"));
-        assertEquals(loginMessage.getText(), "**Successful Login**");
+        assertEquals(loginMessage.getText(), "**Successful Login*");
 
         driver.quit();
     }
