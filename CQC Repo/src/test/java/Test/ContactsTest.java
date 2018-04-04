@@ -293,17 +293,17 @@ public class ContactsTest {
             Cell contactChoiceCell = sheet.getRow(i).getCell(16);
             String contactChoice = contactChoiceCell.getStringCellValue();
 
-            switch (contactChoice){
-                case "Do not contact":
-                    driver.findElement(By.xpath("//*[@id='s_2_1_32_0_icon']")).click();
-                    break;
-                case "Contact By Phone":
-                    driver.findElement(By.xpath("//*[@id='s_2_1_32_0_icon']")).click();
-                    break;
-                case "Contact by email":
-                    driver.findElement(By.xpath("//*[@id='s_2_1_32_0_icon']")).click();
-                    break;
-            }
+//            switch (contactChoice){
+//                case "Do not contact":
+//                    driver.findElement(By.xpath("//*[@id='s_2_1_32_0_icon']")).click();
+//                    break;
+//                case "Contact By Phone":
+//                    driver.findElement(By.xpath("//*[@id='s_2_1_32_0_icon']")).click();
+//                    break;
+//                case "Contact by email":
+//                    driver.findElement(By.xpath("//*[@id='s_2_1_32_0_icon']")).click();
+//                    break;
+//            }
 
             driver.findElement(By.xpath("//*[@id='a_2]/div/table/tbody/tr[21]/td[3]/div/textarea")).sendKeys("Created with Automated Software for Testing Purposes");
 
