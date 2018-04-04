@@ -48,7 +48,7 @@ public class ContactsTest {
         System.out.println(currentDir.getAbsolutePath());
 
         //change this variable (0,1,2) to use different browsers
-        int choice = 1;
+        int choice = 2;
 
         switch (choice) {
             case 0:
