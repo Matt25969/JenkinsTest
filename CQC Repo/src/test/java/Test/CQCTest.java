@@ -47,10 +47,10 @@ public class CQCTest {
     @Before
 
     public void setup() {
+    	
+    	System.out.println(System.getProperty("os.name"));
 
         System.out.println(currentDir.getAbsolutePath());
-
-
 
         //change this variable (0,1,2) to use different browsers
         int choice = 1;
@@ -162,6 +162,10 @@ public class CQCTest {
 
 
     public void demoTestWithExcel() throws InterruptedException {
+    	
+      report = new ExtentReports(currentDir.getAbsolutePath() + "\\demo_test_with_excel.html", true);
+        
+        test = report.startTest("Demo Test With Excel");
 
         // this test will not work without a pre constructed .xls spreadsheet, simply create one with a 4 character word in
         // the upper leftmost column
@@ -223,6 +227,8 @@ public class CQCTest {
 
         testButton.sendKeys(Keys.ENTER);
         Thread.sleep(1000);
+        
+        test.log(LogStatus.INFO, "Set up user");
 
         WebElement login = driver.findElement(By.cssSelector(
                 "body > div > center > table > tbody > tr:nth-child(2) > td > div > center > table > tbody > tr > td:nth-child(2) > p > small > a:nth-child(7)"));
@@ -240,15 +246,23 @@ public class CQCTest {
                 "body > table > tbody > tr > td.auto-style1 > form > div > center > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > input[type=\"button\"]"));
         loginButton.click();
         Thread.sleep(1000);
+        
+        test.log(LogStatus.INFO, "Attempted to login");
 
         WebElement loginMessage = driver.findElement(By.cssSelector(
                 "body > table > tbody > tr > td.auto-style1 > big > blockquote > blockquote > font > center > b"));
 
         assertEquals(loginMessage.getText(), "**Successful Login**");
 
+        if (loginMessage.getText().equals("**Successful Login**")) {
+            test.log(LogStatus.PASS, "Login valid");
+        } else {
+            test.log(LogStatus.FAIL, "Login failed");
+        }
 
         driver.quit();
-
+        report.endTest(test);
+        report.flush();
     }
 
 
