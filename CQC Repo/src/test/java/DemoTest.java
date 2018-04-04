@@ -12,7 +12,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class BrokenDownTest {
+public class DemoTest {
 	
 	  WebDriver driver = null;
 
@@ -22,7 +22,7 @@ public class BrokenDownTest {
 
 
 	@Test
-	public void test() throws InterruptedException {
+	public void DemoTest() throws InterruptedException {
 		
 		 System.setProperty("webdriver.chrome.driver",currentDir.getAbsolutePath() + "\\web_driver/chromedriver.exe");
          driver = new ChromeDriver();
