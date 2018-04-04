@@ -1,3 +1,4 @@
+package Test;
 import java.io.*;
 import java.util.Iterator;
 
@@ -35,7 +36,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 
-public class CQC {
+public class CQCTest {
 
     WebDriver driver = null;
 
