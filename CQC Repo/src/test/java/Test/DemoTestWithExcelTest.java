@@ -1,3 +1,4 @@
+package Test;
 import static org.junit.Assert.*;
 
 import java.io.File;
@@ -19,7 +20,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class DemoTestWithExcel {
+public class DemoTestWithExcelTest {
 	
 	 WebDriver driver = null;
 
@@ -28,7 +29,7 @@ public class DemoTestWithExcel {
 	    File currentDir = new File("");
 
 	@Test
-	public void DemoTestWithExcel() throws InterruptedException {
+	public void DemoTestWithExcelTest() throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver",currentDir.getAbsolutePath() + "\\web_driver/chromedriver.exe");
         driver = new ChromeDriver();
